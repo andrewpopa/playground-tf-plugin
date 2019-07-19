@@ -23,7 +23,7 @@ vagrant up
 vagrant ssh
 ```
 
-## compile custom module
+## compile custom plugin (example from [here](https://github.com/petems/terraform-provider-extip))
 
 ```bash
 go get github.com/petems/terraform-provider-extip
@@ -68,3 +68,6 @@ output "external_ip_from_aws" {
 terraform init
 terraform apply
 ```
+
+## TODO
+- [ ] automate manual step to build plugin
