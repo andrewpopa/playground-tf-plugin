@@ -5,6 +5,9 @@ apt-get update
 
 # install golang-1.10
 apt-get install -y golang-1.10
+apt-get install -y rbenv
+apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev
 
 grep 'GOPATH|GOROOT' ~/.bash_profile &>/dev/null || {
   sudo mkdir -p ~/go

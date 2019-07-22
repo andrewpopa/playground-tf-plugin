@@ -69,5 +69,37 @@ terraform init
 terraform apply
 ```
 
-## TODO
-- [ ] automate manual step to build plugin
+## install rbenv
+```bash
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+```
+
+## install ruby-build (gives - rbenv install)
+```bash
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+```
+
+## configure ruby 2.4.0
+```bash
+rbenv install 2.4.0
+rbenv local 2.4.0
+rbenv versions
+sudo gem install bundler
+bundle install
+```
+
+## execute kitchen tests
+```bash
+bundle exec kitchen converge
+bundle exec kitchen verify
+bundle exec kitchen destroy
+```
+
+## cleanup
+```
+vagrant destroy -f
+```
+
+## Enjoy! 
